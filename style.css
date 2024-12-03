@@ -1,0 +1,63 @@
+body {
+    background:
+        linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%) 0px 0px / 20px 20px fixed,
+        linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%) 10px 10px / 20px 20px fixed,
+        linear-gradient(45deg, #888, #aaa) fixed;
+    text-align: center;
+    font-family: monospace;
+}
+
+#input {
+    border: 3px double black;
+    padding: 5px;
+}
+
+.grid {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: max-content;
+    display: grid;
+    grid-template-areas:
+        'rl r gb gbl'
+        'gl g rb rbl'
+        'bl b rg rgl'
+        'al a rgb rgbl'
+        'rgbal rgba rgba _';
+    grid-gap: 5px;
+    grid-template-columns: auto 1fr 1fr auto;
+    padding: 5px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.grid > div {
+    display: grid;
+}
+
+#r {grid-area: r;}
+#g {grid-area: g;}
+#b {grid-area: b;}
+#a {grid-area: a;}
+#gb {grid-area: gb;}
+#rb {grid-area: rb;}
+#rg {grid-area: rg;}
+#rgb {grid-area: rgb;}
+#rgba {grid-area: rgba;}
+#rl {grid-area: rl;}
+#gl {grid-area: gl;}
+#bl {grid-area: bl;}
+#al {grid-area: al;}
+#gbl {grid-area: gbl;}
+#rbl {grid-area: rbl;}
+#rgl {grid-area: rgl;}
+#rgbl {grid-area: rgbl;}
+#rgbal {grid-area: rgbal;}
+
+.grid img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 200px;
+    max-width: 100%;
+}
